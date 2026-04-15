@@ -25,3 +25,17 @@ body {
   color: var(--foreground);
   font-family: "Nunito", sans-serif;
 }
+
+.recharts-surface:focus,
+.recharts-surface:focus-visible {
+  outline: none;
+}
+
+.recharts-wrapper:focus,
+.recharts-wrapper:focus-visible {
+  outline: none;
+}
+
+.recharts-surface {
+  outline: none !important;
+}
