@@ -29,8 +29,8 @@ const formatNumber = (value?: number) => {
 
 export default function DarkTowerChart() {
    return (
-      <div className="pl-62">
-         <div className="w-full max-w-md rounded-2xl border border-neutral-800 bg-neutral-950 p-4 shadow-xl backdrop-blur-md">
+      <div className="">
+         <div className=" rounded-2xl border border-neutral-800 bg-neutral-950 p-4 shadow-xl backdrop-blur-md">
 
             {/* Header */}
             <div className="mb-4">
@@ -43,8 +43,8 @@ export default function DarkTowerChart() {
             </div>
 
             {/* Chart */}
-            <div className="h-56">
-               <ResponsiveContainer width="100%" height="100%">
+            <div className="h-63">
+               <ResponsiveContainer>
                   <BarChart data={data}>
                      <CartesianGrid
                         stroke="#ffffff"

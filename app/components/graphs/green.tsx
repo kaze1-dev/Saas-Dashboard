@@ -22,8 +22,8 @@ import React from 'react'
 
 const Graph = () => {
    return (
-      <div className="outline-none focus:outline-none pointer-events-none">
-         <ResponsiveContainer className='px-4' width={200} height={100}>
+      <div className="outline-none w-full h-25 focus:outline-none pointer-events-none">
+         <ResponsiveContainer className='px-4' height="100%" width="100%">
             <AreaChart data={dataArray}>
                <defs>
                   <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">

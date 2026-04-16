@@ -22,8 +22,8 @@ import React from 'react'
 
 const Red = () => {
    return (
-      <div className="outline-none focus:outline-none pointer-events-none">
-         <ResponsiveContainer className='px-4' width={200} height={100}>
+      <div className="outline-none w-full h-25 focus:outline-none pointer-events-none">
+         <ResponsiveContainer className='px-4'>
             <AreaChart data={dataArray}>
                <defs>
                   <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
