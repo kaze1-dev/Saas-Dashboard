@@ -18,14 +18,14 @@ const data = [
 const Donut = () => {
    const total = data.reduce((sum, item) => sum + item.value, 0)
    return (
-      <div className="">
+      <div className="w-full">
          <div className="border border-neutral-800 rounded-xl hover:border-neutral-700 transition-all p-2">
             <h2 className="text-neutral-400 text-lg font-bold mb-4">
                Orders Information
             </h2>
 
-            <div className="relative  h-60">
-               <ResponsiveContainer>
+            <div className="relative w-full h-57">
+               <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
 
                      <Tooltip
