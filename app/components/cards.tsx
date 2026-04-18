@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowDown, ArrowUp, Box, Ellipsis, Package2, ScrollText, UsersRound } from 'lucide-react'
+import { ArrowDown, ArrowUp, Box, Package2, ScrollText, UsersRound } from 'lucide-react'
 
 
 const Cards = () => {

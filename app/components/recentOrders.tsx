@@ -1,4 +1,5 @@
 "use client";
+import { MoveRight } from 'lucide-react';
 import React from 'react'
 
 type Order = {
@@ -52,7 +53,7 @@ const orders: Order[] = [
     ]
   },
 
-    {
+  {
     id: "#1027",
     customer: "Naruto",
     date: "2026-4-17",
@@ -63,7 +64,7 @@ const orders: Order[] = [
     ]
   },
 
-    {
+  {
     id: "#1028",
     customer: "Madara",
     date: "2026-4-17",
@@ -74,7 +75,7 @@ const orders: Order[] = [
     ]
   },
 
-    {
+  {
     id: "#1029",
     customer: "Itachi",
     date: "2026-4-17",
@@ -116,7 +117,7 @@ const OrdersTable = () => {
               {orders.map((order) => (
                 <tr
                   key={order.id}
-                  className='border-b border-neutral-800 last:border-none text-sm'
+                  className='border-b border-neutral-800 last:border-none text-sm hover:bg-neutral-900/40 cursor-pointer rounded'
                 >
                   <td className='py-6 font-bold text-neutral-400'>{order.id}</td>
                   <td className='py-6 text-neutral-400 font-bold'>{order.customer}</td>
@@ -136,7 +137,14 @@ const OrdersTable = () => {
                 </tr>
               ))}
             </tbody>
+
           </table>
+        </div>
+        <div className='flex gap-2 text-blue-600 font-bold text-sm items-center justify-center mt-4 cursor-pointer'>
+          <span className=''>
+            View all
+          </span>
+          <MoveRight />
         </div>
       </div>
     </div>
@@ -145,3 +153,5 @@ const OrdersTable = () => {
 }
 
 export default OrdersTable
+
+//DATABASE_URL = "postgresql://neondb_owner:npg_NSgBO3cueaU0@ep-young-hill-alxpws8p.c-3.eu-central-1.aws.neon.tech/neondb?sslmode=require"
