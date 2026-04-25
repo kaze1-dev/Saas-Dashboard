@@ -153,5 +153,3 @@ const OrdersTable = () => {
 }
 
 export default OrdersTable
-
-//DATABASE_URL = "postgresql://neondb_owner:npg_NSgBO3cueaU0@ep-young-hill-alxpws8p.c-3.eu-central-1.aws.neon.tech/neondb?sslmode=require"

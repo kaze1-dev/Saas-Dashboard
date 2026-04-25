@@ -18,8 +18,7 @@ model User {
   email     String        @unique
   password  String?
   createdAt DateTime      @default(now())
-  sessions  Session[]
-  accounts  Account[]
+
 }
 
 model Customer {
@@ -64,23 +63,4 @@ model OrderItem {
   @@index([productId])
 }
 
-model Session {
-  id      String      @id @default(cuid())
-  sessionToken    String    @unique
-  userId        String
-  expires     DateTime
-  user User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  @@index([userId])
-}
 
-model Account {
-  id      String      @id @default(cuid())
-  userId  String
-  provider  String 
-  providerAccountId   String
-  refresh_token     String?
-  access_token      String?
-  expires_at      Int?
-  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  @@unique([provider, providerAccountId])
-}
