@@ -1,4 +1,4 @@
-import registerController from "@/modules/auth/register/register.controller";
+import registerController from "@/controllers/register.controller";
 
 export async function POST(req: Request) {
   return registerController(req as any)

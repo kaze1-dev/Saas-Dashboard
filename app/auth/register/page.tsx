@@ -1,5 +1,6 @@
 "use client"
 import { signIn } from 'next-auth/react';
+import Link from 'next/link';
 import React, { SyntheticEvent } from 'react'
 import { useState } from 'react'
 
@@ -35,7 +36,7 @@ const RegisterPage = () => {
     const data = await res.json()
     console.log(data)
 
-    if(res.ok) {
+    if (res.ok) {
       await signIn("credentials", {
         email: form.email,
         password: form.password,
@@ -58,10 +59,10 @@ const RegisterPage = () => {
           <input type="text" className='w-full px-2 py-2 bg-neutral-800/80 rounded text-sm' placeholder='Name' name='name' onChange={handleChange} />
           <input type="email" className='w-full p-2 bg-neutral-800/80 rounded text-sm' placeholder='Email' name='email' onChange={handleChange} />
           <div className='relative'>
-          <input type={showPassword? "text" : "password"} className='w-full p-2 bg-neutral-800/80 rounded text-sm' placeholder='Password' name='password' onChange={handleChange} />
-          <button className='absolute right-4 text-neutral-400 text-sm top-2 cursor-pointer' type='button'onClick={() => setShowPassword(!showPassword)}>
-            {showPassword? "hide": "show"}
-          </button>
+            <input type={showPassword ? "text" : "password"} className='w-full p-2 bg-neutral-800/80 rounded text-sm' placeholder='Password' name='password' onChange={handleChange} />
+            <button className='absolute right-4 text-neutral-400 text-sm top-2 cursor-pointer' type='button' onClick={() => setShowPassword(!showPassword)}>
+              {showPassword ? "hide" : "show"}
+            </button>
           </div>
         </div>
         <div className='flex justify-center items-center my-6'>
@@ -69,7 +70,9 @@ const RegisterPage = () => {
         </div>
         <div className='flex text-sm gap-2 justify-center items-center'>
           <p className='font-semibold text-neutral-400'>Already have an account?</p>
-          <button className='text-blue-600 font-bold hover:underline cursor-pointer'>Sign In</button>
+          <Link href="/auth/login">
+            <button className='text-blue-600 font-bold hover:underline cursor-pointer'>Sign In</button>
+          </Link>
         </div>
       </form>
     </div>

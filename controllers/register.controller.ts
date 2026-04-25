@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import registerSchema from "../auth.validaton";
-import registerUser from "./register.service";
+import registerUser from "../services/register.service";
 
 const registerController = async (req: NextRequest) => {
   try {
