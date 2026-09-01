@@ -243,7 +243,6 @@ export default function Customers() {
               </tbody>
             </table>
 
-            {/* Pagination Controls Footer Container */}
             {customers.length > 0 && (
               <div className="p-4 border-t border-neutral-900 bg-neutral-950/40">
                 <Pagination totalPages={totalPages} currentPage={currentPage} />
@@ -253,7 +252,6 @@ export default function Customers() {
         )}
       </div>
 
-      {/* Drawer Sheets & Modal Panels */}
       <AnimatePresence mode="wait">
         {selectedId && (
           <CustomDrawer

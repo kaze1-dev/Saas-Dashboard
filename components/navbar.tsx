@@ -84,7 +84,7 @@ const Navbar = () => {
       <nav className="fixed left-4 top-4 bottom-4 w-56 bg-neutral-950 border border-neutral-900 rounded-2xl flex flex-col justify-between p-4 shadow-2xl shadow-black/40 select-none hidden md:flex transition-all duration-200">
         <div className="flex flex-col">
           <Link
-            href="/home"
+            href="/profile"
             className="group flex gap-3 items-center mb-6 p-2 rounded-xl transition-all duration-150 hover:bg-neutral-900/40 border border-transparent hover:border-neutral-900"
           >
             <div className="relative shrink-0 flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-900 border border-neutral-800 text-sm font-bold font-mono text-neutral-300 group-hover:border-neutral-700 transition-colors shadow-inner">
